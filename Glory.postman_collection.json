@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "1723d6af-a1b2-4f4d-be2c-4b7ee0869ab2",
+		"name": "Glory",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getPropietarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/propietarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"propietarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPropietarioById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/propietarios/5d47acd77344fb076ce06f1a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"propietarios",
+						"5d47acd77344fb076ce06f1a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createPropietario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"datos\": {\n\t\t\"nombre1\": \"Ana\",\n\t\t\"nombre2\": \"María\",\n\t\t\"apellido1\": \"Zapa\",\n\t\t\"apellido2\": \"Lara\",\n\t\t\"direccion\": \"Barrio cantaclaro\",\n\t\t\"identificacion\": \"45678900\",\n\t\t\"mascota\": \"Ray\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/propietarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"propietarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletePropietarioById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/propietarios/5d4a1d65bc633102b84f606a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"propietarios",
+						"5d4a1d65bc633102b84f606a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createCita",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"cita\": {\n\t\t\"fecha\": \"02-12-2019\",\n\t\t\"veterinario\": \"José Miguel Bedoya\",\n\t\t\"mascota\": \"Laika\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/propietarios/5d47acd77344fb076ce06f1a/agendar-cita",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"propietarios",
+						"5d47acd77344fb076ce06f1a",
+						"agendar-cita"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCita",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"cita\": {\n\t\t\"fecha\": \"02-12-2019\",\n\t\t\"veterinario\": \"José Miguel Bedoya\",\n\t\t\"mascota\": \"Laika\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/propietarios/5d47acd77344fb076ce06f1a/cita/5d4a1e9bbc633102b84f606b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"propietarios",
+						"5d47acd77344fb076ce06f1a",
+						"cita",
+						"5d4a1e9bbc633102b84f606b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createVeterinario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"vet\": {\n\t\t\"nombre1\": \"Ana\",\n\t\t\"nombre2\": \"María\",\n\t\t\"apellido1\": \"Zapa\",\n\t\t\"apellido2\": \"Lara\",\n\t\t\"identificacion\": \"45678900\",\n\t\t\"telefono\": \"24845882\",\n\t\t\"especialidad\": \"prediatría\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/veterinarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"veterinarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createServicio",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"serv\": {\n\t\t\"nombre\": \"Serv #1\",\n\t\t\"descripcion\": \"Desc #1\",\n\t\t\"precio\": 20000\n\t}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/servicios/5d4a1ff2bc633102b84f606c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"servicios",
+						"5d4a1ff2bc633102b84f606c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createInsumos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"insumo\": {\n\t\t\"nombre\": \"Serv #1\",\n\t\t\"descripcion\": \"Desc #1\",\n\t\t\"precio\": 20000\n\t}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/insumos/5d4a1ff2bc633102b84f606c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"insumos",
+						"5d4a1ff2bc633102b84f606c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
