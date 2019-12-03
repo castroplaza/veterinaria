@@ -2,6 +2,5 @@
 
 # Integrantes
 
-1. Glorimar Daza
-2. Orlando Castro
-3. Paula Arroyo
+1. Orlando Castro
+2. Paula Arroyo
