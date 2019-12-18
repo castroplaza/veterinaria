@@ -2,12 +2,13 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
 
 const VeterinarioSchema = new Schema({
+  email: String,
+  password: String,
   nombre1: String,
   nombre2: String,
   apellido1: String,
   apellido2: String,
   identificacion: String,
-  telefono: String,
   especialidad: String,
   id_servicio: [
     {

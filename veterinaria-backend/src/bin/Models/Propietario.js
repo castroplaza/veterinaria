@@ -2,13 +2,14 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
 
 const PropietarioSchema = new Schema({
+  email: String,
+  password: String,
   nombre1: String,
   nombre2: String,
   apellido1: String,
   apellido2: String,
   direccion: String,
   identificacion: String,
-  mascota: String,
   id_mascotas: [
     {
       type: Schema.Types.ObjectId,
